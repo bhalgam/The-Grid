@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>The grid</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    
+    <body>
+        <img src="Focus 2.png" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; object-fit: cover;">
+            <header class="site-header">
+                <div class="cover">
+
+                    
+                    <!-- <p style="font-size: 5vw;";>FF O C U S </p> -->
+                            <p style="color: #48524d; font-size: 8vw;">
+                            F O C U S   
+                        </p>
+
+                    </div>
+                </div>
+                <div class="wrap header-meta">
+                    <p style="color: #48524d; font-size: 30px;text-align: center;">
+                            The Grid 
+                        </p>
+                    
+                  
+                </div>
+            </header>
+
+        <main class="wrap main-grid">
+            <section class="card timer-card" aria-labelledby="timer-label">
+                <h2 id="timer-label">Promodo</h2>
+                <div class="time-display" id="time">25:00</div>
+
+                <div class="timer-controls">
+                    <label for="sessionLength">Minutes</label>
+                    <select id="sessionLength" aria-label="Session length">
+                        <option value="15">15</option>
+                        <option value="25" selected>25</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                        <option value="60">60</option>
+                      </select>
+                  
+
+                    <div class="buttons">
+                        <button id="start">Start</button>
+                        <button id="pause" disabled>Pause</button>
+                        <button id="reset">Reset</button>
+                    </div>
+                </div>
+
+                <progress id="progress" value="0" max="100" aria-hidden="true"></progress>
+            </section>
+
+            <section class="card countup-card" aria-labelledby="countup-label">
+                <h2 id="countup-label">Count Up</h2>
+                <div class="time-display" id="countup-time">00:00:00</div>
+                <div class="timer-controls">
+                    <div class="buttons">
+                        <button id="countup-start">start</button>
+                        <button id="countup-pause" disabled>Pause</button>
+                        <button id="countup-reset">Reset</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card tasks-card" aria-labelledby="tasks-label">
+                <h2 id="tasks-label">Tasks</h2>
+                <form id="task-form" class="task-form">
+                    <input id="task-input" type="text" placeholder="Add a task (press Enter)" aria-label="New task">
+                    <button type="submit">Add</button>
+                </form>
+                <ul id="task-list" class="task-list" aria-live="polite"></ul>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="wrap">
+                <big>Built for focused study  </big>
+            <small><br>© 2026 Malhar bhalgama. All rights reserved.
+                </small>
+            </div>
+        </footer>
+
+        <script src="Main.js" defer></script>
+    </body>
+</html>
